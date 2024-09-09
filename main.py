@@ -14,7 +14,7 @@ async def main():
     # Конфигурируем логирование
     logging.basicConfig(
         level=logging.INFO,
-        format='%(filename)s:%(linemo)d #%(levelname)-8s '
+        format='%(filename)s:%(lineno)d #%(levelname)-8s '
                '[%(asctime)s] - %(name)s - %(message)s')
 
     # Выводим в консоль информацию о начале запуска бота
@@ -38,4 +38,4 @@ async def main():
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
 
-asyncio.run(main.py)
+asyncio.run(main())
